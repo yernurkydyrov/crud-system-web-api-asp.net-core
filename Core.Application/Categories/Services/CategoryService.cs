@@ -1,35 +1,33 @@
-﻿using System;
-using System.Linq;
-using System.Threading.Tasks;
-using Core.Application.Categories.Services.Abstractions;
+﻿using System.Threading.Tasks;
+using AutoMapper;
+using Core.Application.Abstractions;
+using Core.Application.Categories.Models;
 using Core.Application.Interfaces;
 using Core.Domain.Entities;
 
 namespace Core.Application.Categories.Services
 {
-    public class CategoryService : BaseCrudService<Category>
+    public class CategoryService : BaseDictionaryCrudService<Category, CategoryDto>
     {
-        public CategoryService(IAppDbContext dbContext) : base(dbContext)
+        public CategoryService(IAppDbContext dbContext, IMapper mapper) : base(dbContext, mapper)
         {
         }
 
-        private readonly IAppDbContext _context;
-
         public async Task BoundAttribute(int categoryId, int attributeId)
         {
-            if (_context.Categories.Any(category => category.Id == categoryId))
-            {
-                throw new ArgumentException(nameof(categoryId));
-            }
-
-            if (_context.Attributes.Any(category => category.Id == categoryId))
-            {
-                throw new ArgumentException(nameof(attributeId));
-            }
-
-            _context.CategoryAttributes.Add(new CategoryAttribute(categoryId, attributeId));
-
-            await _context.SaveChangesAsync(default);
+            // if (Context.Categories.Any(category => category.Id == categoryId))
+            // {
+            //     throw new ArgumentException(nameof(categoryId));
+            // }
+            //
+            // if (Context.Attributes.Any(category => category.Id == categoryId))
+            // {
+            //     throw new ArgumentException(nameof(attributeId));
+            // }
+            //
+            // Context.CategoryAttributes.Add(new CategoryAttribute(categoryId, attributeId));
+            //
+            // await Context.SaveChangesAsync(default);
         }
     }
 }

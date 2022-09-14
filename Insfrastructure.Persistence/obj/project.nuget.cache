@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "IUWrHgMBxgVjkNNykESkhQ5xkc/V8Nnp5umligkyq4CzUrdTsrAtfjWCvh8j9RGRBStmc5LXH1X8d+SKNTvqyg==",
+  "dgSpecHash": "aJLL37R9qk2J8ifPcLQQOR8Sm3Vy4HYqq/pewpNv/gZh6grsk0DdglZrb5OUuJw8NjMzimvIjb/rJH/tg0Cqmw==",
   "success": true,
-  "projectFilePath": "/home/madik/Development/Work/Yernur/crud-system-web-api-asp.net-core/WebApi/WebApi.csproj",
+  "projectFilePath": "/home/madik/Development/Work/Yernur/crud-system-web-api-asp.net-core/Insfrastructure.Persistence/Insfrastructure.Persistence.csproj",
   "expectedPackageFiles": [
     "/home/madik/.nuget/packages/automapper/11.0.0/automapper.11.0.0.nupkg.sha512",
     "/home/madik/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/11.0.0/automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
@@ -13,21 +13,24 @@
     "/home/madik/.nuget/packages/microsoft.entityframeworkcore/5.0.2/microsoft.entityframeworkcore.5.0.2.nupkg.sha512",
     "/home/madik/.nuget/packages/microsoft.entityframeworkcore.abstractions/5.0.2/microsoft.entityframeworkcore.abstractions.5.0.2.nupkg.sha512",
     "/home/madik/.nuget/packages/microsoft.entityframeworkcore.analyzers/5.0.2/microsoft.entityframeworkcore.analyzers.5.0.2.nupkg.sha512",
+    "/home/madik/.nuget/packages/microsoft.entityframeworkcore.relational/5.0.2/microsoft.entityframeworkcore.relational.5.0.2.nupkg.sha512",
     "/home/madik/.nuget/packages/microsoft.extensions.caching.abstractions/5.0.0/microsoft.extensions.caching.abstractions.5.0.0.nupkg.sha512",
     "/home/madik/.nuget/packages/microsoft.extensions.caching.memory/5.0.0/microsoft.extensions.caching.memory.5.0.0.nupkg.sha512",
+    "/home/madik/.nuget/packages/microsoft.extensions.configuration.abstractions/5.0.0/microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
     "/home/madik/.nuget/packages/microsoft.extensions.dependencyinjection/5.0.1/microsoft.extensions.dependencyinjection.5.0.1.nupkg.sha512",
     "/home/madik/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/6.0.0/microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
     "/home/madik/.nuget/packages/microsoft.extensions.logging/5.0.0/microsoft.extensions.logging.5.0.0.nupkg.sha512",
     "/home/madik/.nuget/packages/microsoft.extensions.logging.abstractions/5.0.0/microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
     "/home/madik/.nuget/packages/microsoft.extensions.options/6.0.0/microsoft.extensions.options.6.0.0.nupkg.sha512",
     "/home/madik/.nuget/packages/microsoft.extensions.primitives/6.0.0/microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "/home/madik/.nuget/packages/npgsql/5.0.2/npgsql.5.0.2.nupkg.sha512",
+    "/home/madik/.nuget/packages/npgsql.entityframeworkcore.postgresql/5.0.2/npgsql.entityframeworkcore.postgresql.5.0.2.nupkg.sha512",
     "/home/madik/.nuget/packages/system.collections.immutable/5.0.0/system.collections.immutable.5.0.0.nupkg.sha512",
     "/home/madik/.nuget/packages/system.componentmodel.annotations/5.0.0/system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "/home/madik/.nuget/packages/system.diagnostics.diagnosticsource/5.0.1/system.diagnostics.diagnosticsource.5.0.1.nupkg.sha512",
     "/home/madik/.nuget/packages/system.runtime.compilerservices.unsafe/6.0.0/system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
     "/home/madik/.nuget/packages/microsoft.netcore.app.ref/3.1.0/microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
-    "/home/madik/.nuget/packages/microsoft.aspnetcore.app.ref/3.1.10/microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
-    "/home/madik/.nuget/packages/microsoft.netcore.app.host.linux-x64/3.1.11/microsoft.netcore.app.host.linux-x64.3.1.11.nupkg.sha512"
+    "/home/madik/.nuget/packages/microsoft.aspnetcore.app.ref/3.1.10/microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
   ],
   "logs": []
 }

@@ -13,7 +13,6 @@ namespace Core.Domain.Entities
         
         [ForeignKey(nameof(Category))]
         public int CategoryId { get; set; }
-
-
+        public Category Category { get; set; }
     }
 }

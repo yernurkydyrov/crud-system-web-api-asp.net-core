@@ -12,7 +12,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Domain", "Core.Domain\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Application", "Core.Application\Core.Application.csproj", "{ADF439C0-DDCA-41E9-AD0D-2918DDB2ED54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Insfrastructure.Persistance", "Insfrastructure.Persistance\Insfrastructure.Persistance.csproj", "{C52B79E3-FC8B-4C8B-AF00-7315D9DEF92A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Insfrastructure.Persistence", "Insfrastructure.Persistence\Insfrastructure.Persistence.csproj", "{C52B79E3-FC8B-4C8B-AF00-7315D9DEF92A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{5E27A73E-AD41-4FE0-93DA-590D2D201171}"
 EndProject

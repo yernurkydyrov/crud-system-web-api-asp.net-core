@@ -6,20 +6,17 @@ namespace Core.Domain.Entities
 {
     public class CategoryAttribute : BaseEntity
     {
-        public CategoryAttribute(int idCategory, int idAttributes) : this(0, idCategory, idAttributes)
+        public CategoryAttribute(int id, int categoryId, int attributeId) : base(id)
         {
-        }
-
-        public CategoryAttribute(int id, int idCategory, int idAttributes) : base(id)
-        {
-            IdCategory = idCategory;
-            IdAttributes = idAttributes;
+            CategoryId = categoryId;
+            AttributeId = attributeId;
         }
 
         [ForeignKey(nameof(Category))]
-        public int? IdCategory { get; set; }
+        public int? CategoryId { get; set; }
+        public Category Category { get; set; }
         [ForeignKey(nameof(Attribute))]
-        public int? IdAttributes { get; set; }
-
+        public int? AttributeId { get; set; }
+        public Attribute Attribute { get; set; }
     }
 }

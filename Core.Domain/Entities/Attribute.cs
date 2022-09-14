@@ -2,13 +2,10 @@
 
 namespace Core.Domain.Entities
 {
-    public class Attribute : BaseEntity
+    public class Attribute : BaseDictionary
     {
-        public string Name { get; set; }
-
-        public Attribute(int id, string name) : base(id)
+        public Attribute(int id, string name) : base(id, name)
         {
-            Name = name;
         }
     }
 }

@@ -6,17 +6,19 @@ namespace Core.Domain.Entities
 {
     public class ProductAttributesValue : BaseEntity
     {
-        public ProductAttributesValue(int id, int idProduct, int idAttributes, string value) : base(id)
+        public ProductAttributesValue(int id, int productId, int attributeId, string value) : base(id)
         {
-            IdProduct = idProduct;
-            IdAttributes = idAttributes;
+            ProductId = productId;
+            AttributeId = attributeId;
             Value = value;
         }
 
         [ForeignKey(nameof(Product))]
-        public int IdProduct { get; set; }
+        public int ProductId { get; set; }
+        public Product Product { get; set; }
         [ForeignKey(nameof(Attribute))]
-        public int IdAttributes { get; set; }
+        public int AttributeId { get; set; }
+        public Attribute Attribute { get; set; }
         public string Value { get; set; }
 
     }

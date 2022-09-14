@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "NFPS6jGmL4dCpwtABPcaOXdEQ+D0kR964fQ9PrSlk+obLtN+ezdNCU87djBp8Po1KUEhEXrpbWIsPA2zM8UwJQ==",
+  "dgSpecHash": "IPowfjFelRsTE+h3jEqWjILXq8qkba+kfOhiOLbH38szh2ZUyYV89e3R2InfuH0igfuT8V3R2lhKf4EXPzxYYA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\HP\\RiderProjects\\AppApi\\Core.Domain\\Core.Domain.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/home/madik/Development/Work/Yernur/crud-system-web-api-asp.net-core/Core.Domain/Core.Domain.csproj",
+  "expectedPackageFiles": [
+    "/home/madik/.nuget/packages/microsoft.netcore.app.ref/3.1.0/microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "/home/madik/.nuget/packages/microsoft.aspnetcore.app.ref/3.1.10/microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
+  ],
   "logs": []
 }

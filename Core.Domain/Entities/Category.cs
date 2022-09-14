@@ -3,14 +3,10 @@
 namespace Core.Domain.Entities
 
 {
-    public class Category : BaseEntity
+    public class Category : BaseDictionary
     {
-        public Category(int id) : base(id)
+        public Category(int id, string name) : base(id, name)
         {
         }
-
-
-        public string Name { get; set; }
-
     }
 }
