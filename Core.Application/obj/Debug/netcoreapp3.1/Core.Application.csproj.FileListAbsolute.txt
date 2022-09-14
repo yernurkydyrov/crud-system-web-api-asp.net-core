@@ -1,0 +1,12 @@
+/home/madik/Development/Work/Yernur/crud-system-web-api-asp.net-core/Core.Application/bin/Debug/netcoreapp3.1/Core.Application.deps.json
+/home/madik/Development/Work/Yernur/crud-system-web-api-asp.net-core/Core.Application/bin/Debug/netcoreapp3.1/Core.Application.dll
+/home/madik/Development/Work/Yernur/crud-system-web-api-asp.net-core/Core.Application/bin/Debug/netcoreapp3.1/Core.Application.pdb
+/home/madik/Development/Work/Yernur/crud-system-web-api-asp.net-core/Core.Application/bin/Debug/netcoreapp3.1/Core.Domain.dll
+/home/madik/Development/Work/Yernur/crud-system-web-api-asp.net-core/Core.Application/bin/Debug/netcoreapp3.1/Core.Domain.pdb
+/home/madik/Development/Work/Yernur/crud-system-web-api-asp.net-core/Core.Application/obj/Debug/netcoreapp3.1/Core.Application.csproj.AssemblyReference.cache
+/home/madik/Development/Work/Yernur/crud-system-web-api-asp.net-core/Core.Application/obj/Debug/netcoreapp3.1/Core.Application.AssemblyInfoInputs.cache
+/home/madik/Development/Work/Yernur/crud-system-web-api-asp.net-core/Core.Application/obj/Debug/netcoreapp3.1/Core.Application.AssemblyInfo.cs
+/home/madik/Development/Work/Yernur/crud-system-web-api-asp.net-core/Core.Application/obj/Debug/netcoreapp3.1/Core.Application.csproj.CoreCompileInputs.cache
+/home/madik/Development/Work/Yernur/crud-system-web-api-asp.net-core/Core.Application/obj/Debug/netcoreapp3.1/Core.Application.csproj.CopyComplete
+/home/madik/Development/Work/Yernur/crud-system-web-api-asp.net-core/Core.Application/obj/Debug/netcoreapp3.1/Core.Application.dll
+/home/madik/Development/Work/Yernur/crud-system-web-api-asp.net-core/Core.Application/obj/Debug/netcoreapp3.1/Core.Application.pdb

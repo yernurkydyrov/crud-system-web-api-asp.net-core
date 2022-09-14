@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "/home/madik/.dotnet/store/|arch|/|tfm|",
+      "/home/madik/.nuget/packages"
+    ]
+  }
+}

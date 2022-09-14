@@ -4,7 +4,6 @@ using System.Threading.Tasks;
 using AutoMapper;
 using Core.Application.Abstractions.Models;
 using Core.Application.Interfaces;
-using Core.Domain.Entities;
 using Core.Domain.Entities.Abstractions;
 using Microsoft.EntityFrameworkCore;
 
