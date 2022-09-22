@@ -7,7 +7,7 @@ using Core.Domain.Entities;
 
 namespace Core.Application.Attributes.Services
 {
-    public class AttributeService : BaseDictionaryCrudService<Attribute, AttributeDto>
+    public class AttributeService : BaseDictionaryQueryService<Attribute, AttributeDto>
     {
         public AttributeService(IAppDbContext dbContext, IMapper mapper) : base(dbContext, mapper)
         {

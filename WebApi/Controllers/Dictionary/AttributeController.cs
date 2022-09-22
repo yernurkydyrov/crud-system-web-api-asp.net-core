@@ -11,7 +11,7 @@ namespace WebApi.Controllers.Dictionary
 {
     public class AttributeController : BaseDictionaryController<
         IAttributeQueryServices,
-        BaseDictionaryCrudService<Attribute, AttributeDto>,
+        BaseDictionaryQueryService<Attribute, AttributeDto>,
         Attribute,
         AttributeDto>
     {

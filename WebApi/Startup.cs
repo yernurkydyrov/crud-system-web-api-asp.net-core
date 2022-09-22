@@ -33,7 +33,7 @@ namespace WebApi
         {
             services.AddControllers();
 
-            services.AddScoped(typeof(IDictionaryQueryService<,>), typeof(BaseDictionaryCrudService<,>));
+            services.AddScoped(typeof(IDictionaryQueryService<,>), typeof(BaseDictionaryQueryService<,>));
             services.AddDbContext<AppDbContext>(options => 
                 options.UseNpgsql(Configuration.GetConnectionString("Default")));
             services.AddScoped<IAppDbContext, AppDbContext>();

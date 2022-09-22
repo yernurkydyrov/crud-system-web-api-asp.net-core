@@ -9,40 +9,42 @@ namespace WebApi.Controllers.Abstractions
     [ApiController]
     [Route("api/[controller]/[action]")]
     public abstract class
-        BaseDictionaryController<TDictionaryQueryService, TDictionaryCommandService, TDictionary, TDictionaryDto> : ControllerBase
+        BaseDictionaryController<
+            TDictionaryQueryService,
+            TDictionaryCommandService,
+            TDictionary,
+            TDictionaryDto> : ControllerBase
         where TDictionary : BaseDictionary
         where TDictionaryDto : BaseDictionaryDto
         where TDictionaryQueryService : IDictionaryQueryService<TDictionary, TDictionaryDto>
         where TDictionaryCommandService : IDictionaryCommandService<TDictionary, TDictionaryDto>
     {
-        protected readonly IDictionaryQueryService<TDictionary, TDictionaryDto> QueryService;
+        protected readonly TDictionaryQueryService QueryService;
+        protected readonly TDictionaryCommandService CommandService;
 
-        protected BaseDictionaryController(IDictionaryQueryService<TDictionary, TDictionaryDto> queryService)
+        protected BaseDictionaryController(TDictionaryQueryService queryService, TDictionaryCommandService commandService)
         {
             QueryService = queryService;
-            
-            
+            CommandService = commandService;
         }
+        
         [HttpPost]
-        public async Task Create(TDictionary obj) => await QueryService.CreateAsync(obj);
-
+        public async Task Create(TDictionaryDto obj) =>
+            await CommandService.CreateAsync(obj);
 
         [HttpGet("{id:int}")]
         public async Task<TDictionaryDto> GetId(int id) => await QueryService.GetId(id);
         
         [HttpPut]
         public async Task<TDictionaryDto> Update(TDictionaryDto dto) =>
-            await QueryService.UpdateAsync(dto);
+            await CommandService.UpdateAsync(dto);
 
         [HttpDelete]
-        public async Task Delete(int id) => await QueryService.DeleteAsync(id);
+        public async Task Delete(int id) => 
+            await CommandService.DeleteAsync(id);
 
-        
         [HttpGet]
         public virtual async Task<TDictionaryDto[]> ViewAll() =>
             await QueryService.GetAll();
-
-
-
     }
 }
