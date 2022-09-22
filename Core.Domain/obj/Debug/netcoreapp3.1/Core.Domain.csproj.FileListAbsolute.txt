@@ -7,3 +7,15 @@
 /home/madik/Development/Work/Yernur/crud-system-web-api-asp.net-core/Core.Domain/obj/Debug/netcoreapp3.1/Core.Domain.csproj.CoreCompileInputs.cache
 /home/madik/Development/Work/Yernur/crud-system-web-api-asp.net-core/Core.Domain/obj/Debug/netcoreapp3.1/Core.Domain.dll
 /home/madik/Development/Work/Yernur/crud-system-web-api-asp.net-core/Core.Domain/obj/Debug/netcoreapp3.1/Core.Domain.pdb
+C:\Users\HP\RiderProjects\AppApi\Core.Domain\bin\Debug\netcoreapp3.1\Core.Domain.deps.json
+C:\Users\HP\RiderProjects\AppApi\Core.Domain\bin\Debug\netcoreapp3.1\Core.Domain.dll
+C:\Users\HP\RiderProjects\AppApi\Core.Domain\bin\Debug\netcoreapp3.1\Core.Domain.pdb
+C:\Users\HP\RiderProjects\AppApi\Core.Domain\obj\Debug\netcoreapp3.1\Core.Domain.AssemblyInfoInputs.cache
+C:\Users\HP\RiderProjects\AppApi\Core.Domain\obj\Debug\netcoreapp3.1\Core.Domain.AssemblyInfo.cs
+C:\Users\HP\RiderProjects\AppApi\Core.Domain\obj\Debug\netcoreapp3.1\Core.Domain.csproj.CoreCompileInputs.cache
+C:\Users\HP\RiderProjects\AppApi\Core.Domain\obj\Debug\netcoreapp3.1\Core.Domain.dll
+C:\Users\HP\RiderProjects\AppApi\Core.Domain\obj\Debug\netcoreapp3.1\Core.Domain.pdb
+C:\Users\HP\RiderProjects\AppApi\Core.Domain\obj\Debug\netcoreapp3.1\Core.Domain.csprojAssemblyReference.cache
+C:\Users\HP\RiderProjects\AppApi\Core.Domain\bin\Debug\netcoreapp3.1\Core.Domain.runtimeconfig.json
+C:\Users\HP\RiderProjects\AppApi\Core.Domain\bin\Debug\netcoreapp3.1\Core.Domain.runtimeconfig.dev.json
+C:\Users\HP\RiderProjects\AppApi\Core.Domain\obj\Debug\netcoreapp3.1\Core.Domain.genruntimeconfig.cache

@@ -12,6 +12,17 @@ namespace Core.Domain.Entities
             AttributeId = attributeId;
         }
 
+        public CategoryAttribute(int? categoryId, int? attributeId) : base(0)
+        {
+            CategoryId = categoryId;
+            AttributeId = attributeId;
+        }
+
+        public CategoryAttribute(int id) : base(id)
+        {
+        }
+        
+
         [ForeignKey(nameof(Category))]
         public int? CategoryId { get; set; }
         public Category Category { get; set; }

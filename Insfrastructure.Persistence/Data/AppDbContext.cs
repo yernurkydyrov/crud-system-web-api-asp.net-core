@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Insfrastructure.Persistance.Data
 {
+    
     public class AppDbContext : DbContext, IAppDbContext
     {
         public DbSet<Attribute> Attributes { get; set; }

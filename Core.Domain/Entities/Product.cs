@@ -11,6 +11,7 @@ namespace Core.Domain.Entities
             CategoryId = categoryId;
         }
         
+        
         [ForeignKey(nameof(Category))]
         public int CategoryId { get; set; }
         public Category Category { get; set; }

@@ -12,6 +12,7 @@ namespace Core.Domain.Entities
             AttributeId = attributeId;
             Value = value;
         }
+        
 
         [ForeignKey(nameof(Product))]
         public int ProductId { get; set; }

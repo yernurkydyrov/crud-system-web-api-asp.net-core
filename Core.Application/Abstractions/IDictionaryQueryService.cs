@@ -1,5 +1,6 @@
 using System.Threading.Tasks;
 using Core.Application.Abstractions.Models;
+using Core.Domain.Entities;
 using Core.Domain.Entities.Abstractions;
 
 namespace Core.Application.Abstractions
@@ -9,5 +10,10 @@ namespace Core.Application.Abstractions
         where TDictionaryDto : BaseDictionaryDto
     {
         Task<TDictionaryDto[]> GetAll();
+        Task<TDictionaryDto> GetId(int id);
+
+        Task<TDictionaryDto> UpdateAsync(TDictionaryDto category);
+
+        Task DeleteAsync(int id);
     }
 }

@@ -9,20 +9,35 @@ namespace WebApi.Controllers.Abstractions
     [ApiController]
     [Route("api/[controller]/[action]")]
     public abstract class
-        BaseDictionaryController<TService, TQueryService, TDictionary, TDictionaryDto> : ControllerBase
+        BaseDictionaryController<TDictionaryQueryService, TDictionaryCommandService, TDictionary, TDictionaryDto> : ControllerBase
         where TDictionary : BaseDictionary
         where TDictionaryDto : BaseDictionaryDto
-        where TService : IDictionaryQueryService<TDictionary, TDictionaryDto>
-        where TQueryService : IDictionaryCommandService<TDictionary, TDictionaryDto>
+        where TDictionaryQueryService : IDictionaryQueryService<TDictionary, TDictionaryDto>
+        where TDictionaryCommandService : IDictionaryCommandService<TDictionary, TDictionaryDto>
     {
-        private readonly IDictionaryQueryService<TDictionary, TDictionaryDto> _dictionaryQueryService;
+        protected readonly IDictionaryQueryService<TDictionary, TDictionaryDto> QueryService;
 
-        protected BaseDictionaryController(IDictionaryQueryService<TDictionary, TDictionaryDto> dictionaryQueryService)
+        protected BaseDictionaryController(IDictionaryQueryService<TDictionary, TDictionaryDto> queryService)
         {
-            _dictionaryQueryService = dictionaryQueryService;
+            QueryService = queryService;
+            
+            
         }
 
-        public async Task<TDictionaryDto[]> ViewAll() =>
-            await _dictionaryQueryService.GetAll();
+        [HttpGet]
+        public virtual async Task<TDictionaryDto[]> ViewAll() =>
+            await QueryService.GetAll();
+
+        [HttpGet("{id:int}")]
+        public async Task<TDictionaryDto> GetId(int id) => await QueryService.GetId(id);
+        
+        [HttpPut]
+        public async Task<TDictionaryDto> Update(TDictionaryDto dto) =>
+            await QueryService.UpdateAsync(dto);
+
+        [HttpDelete]
+        public async Task Delete(int id) => await QueryService.DeleteAsync(id);
+
+
     }
 }

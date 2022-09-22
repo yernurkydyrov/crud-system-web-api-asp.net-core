@@ -12,9 +12,6 @@
             Id = id;
         }
 
-
-        
-
         public int Id { get; set; }
     }
 }

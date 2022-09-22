@@ -3,10 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Core.Application.Abstractions;
+using Core.Application.Categories.Models;
+using Core.Application.Interfaces;
+using Core.Domain.Entities.Abstractions;
+using Insfrastructure.Persistance.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -29,6 +34,11 @@ namespace WebApi
             services.AddControllers();
 
             services.AddScoped(typeof(IDictionaryQueryService<,>), typeof(BaseDictionaryCrudService<,>));
+            services.AddDbContext<AppDbContext>(options => 
+                options.UseNpgsql(Configuration.GetConnectionString("Default")));
+            services.AddScoped<IAppDbContext, AppDbContext>();
+            services.AddAutoMapper(typeof(CategoryDto).Assembly);
+            services.AddSwaggerGen();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,6 +49,9 @@ namespace WebApi
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseSwagger();
+            app.UseSwaggerUI();
+            
             app.UseHttpsRedirection();
 
             app.UseRouting();
