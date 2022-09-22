@@ -23,10 +23,9 @@ namespace WebApi.Controllers.Abstractions
             
             
         }
+        [HttpPost]
+        public async Task Create(TDictionary obj) => await QueryService.CreateAsync(obj);
 
-        [HttpGet]
-        public virtual async Task<TDictionaryDto[]> ViewAll() =>
-            await QueryService.GetAll();
 
         [HttpGet("{id:int}")]
         public async Task<TDictionaryDto> GetId(int id) => await QueryService.GetId(id);
@@ -37,6 +36,12 @@ namespace WebApi.Controllers.Abstractions
 
         [HttpDelete]
         public async Task Delete(int id) => await QueryService.DeleteAsync(id);
+
+        
+        [HttpGet]
+        public virtual async Task<TDictionaryDto[]> ViewAll() =>
+            await QueryService.GetAll();
+
 
 
     }

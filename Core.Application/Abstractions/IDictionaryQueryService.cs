@@ -15,5 +15,7 @@ namespace Core.Application.Abstractions
         Task<TDictionaryDto> UpdateAsync(TDictionaryDto category);
 
         Task DeleteAsync(int id);
+        
+        Task CreateAsync(TDictionary obj);
     }
 }

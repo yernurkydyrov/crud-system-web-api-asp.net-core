@@ -63,6 +63,27 @@ namespace Core.Application.Abstractions
             await Context.SaveChangesAsync(CancellationToken.None);
         }
 
+        public async Task CreateAsync(TDictionary obj)
+        {
+            _dbSet.Add(obj);
+            await Context.SaveChangesAsync(CancellationToken.None);
+        }
+
+        /*public async Task Put(TDictionary tdo)
+        {
+            /*
+            var obj = await Context.Products.FindAsync(tdo.Id);
+            #1#
+            
+            if (obj == null)
+            {
+                return;
+            }
+
+            obj.Id = tdo.Id;
+        }*/
+
+
         public async Task<TBaseDictionaryDto> GetId(int id)
         {
             var result = await _dbSet.FindAsync(new object[] { id });

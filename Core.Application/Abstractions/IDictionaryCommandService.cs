@@ -11,5 +11,8 @@ namespace Core.Application.Abstractions
         Task<TDictionaryDto> AddAsync(TDictionary entity);
         Task UpdateAsync(TDictionary entity);
         Task DeleteAsync(int id);
+        Task CreateAsync(TDictionary obj);
+        /*Task Put(TDictionary tdo);*/
+
     }
 }
