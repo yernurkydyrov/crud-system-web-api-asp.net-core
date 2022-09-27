@@ -10,7 +10,7 @@ namespace Core.Application.Attributes.Profiles
     {
         public AttributeProfile()
         {
-            CreateMap<Attribute, AttributeDto>()
+            CreateMap<Attributive, AttributeDto>()
                 .ReverseMap();
 
             /*

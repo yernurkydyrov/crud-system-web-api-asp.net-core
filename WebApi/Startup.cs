@@ -1,21 +1,16 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Core.Application.Abstractions;
 using Core.Application.Categories.Models;
+using Core.Application.Categories.Services;
+using Core.Application.Categories.Services.Implementation;
 using Core.Application.Interfaces;
-using Core.Domain.Entities.Abstractions;
+using Core.Application.Products.Commands;
 using Insfrastructure.Persistance.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 
 namespace WebApi
 {
@@ -34,9 +29,17 @@ namespace WebApi
             services.AddControllers();
 
             services.AddScoped(typeof(IDictionaryQueryService<,>), typeof(BaseDictionaryQueryService<,>));
+            services.AddScoped(typeof(IDictionaryCommandService<,>), typeof(BaseDictionaryCommandService<,>));
             services.AddDbContext<AppDbContext>(options => 
                 options.UseNpgsql(Configuration.GetConnectionString("Default")));
             services.AddScoped<IAppDbContext, AppDbContext>();
+            services.AddScoped<ICategoryCommandService, CategoryCommandService>();
+            services.AddScoped<ICategoryQueryService, CategoryQueryService>();
+            services.AddScoped<CreateProductCommand>();
+            services.AddScoped<DeleteProductCommand>();
+            services.AddScoped<UpdateProductCommand>();
+
+
             services.AddAutoMapper(typeof(CategoryDto).Assembly);
             services.AddSwaggerGen();
         }

@@ -8,7 +8,7 @@ namespace Insfrastructure.Persistance.Data
     
     public class AppDbContext : DbContext, IAppDbContext
     {
-        public DbSet<Attribute> Attributes { get; set; }
+        public DbSet<Attributive> Attributes { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<ProductAttributesValue> ProductAttributeValues { get; set; }

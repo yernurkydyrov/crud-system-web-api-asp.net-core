@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Threading;
 using System.Threading.Tasks;
 using AutoMapper;
 using AutoMapper.QueryableExtensions;
@@ -17,22 +16,19 @@ namespace Core.Application.Abstractions
     {
         private readonly DbSet<TDictionary> _dbSet;
         private readonly IMapper _mapper;
-
         protected readonly IAppDbContext Context;
-
         public BaseDictionaryQueryService(
             IAppDbContext dbContext,
             IMapper mapper)
         {
             _mapper = mapper;
             Context = dbContext;
+            
             _dbSet = dbContext.GetDbSet<TDictionary>();
         }
-
         public async Task<TBaseDictionaryDto[]> GetAll() =>
             await _dbSet.ProjectTo<TBaseDictionaryDto>(_mapper.ConfigurationProvider)
                 .ToArrayAsync();
-
         public async Task<TBaseDictionaryDto> GetId(int id)
         {
             var result = await _dbSet.FindAsync(new object[] { id });

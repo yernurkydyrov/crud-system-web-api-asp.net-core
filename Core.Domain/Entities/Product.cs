@@ -1,4 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using Core.Domain.Entities.Abstractions;
 
 namespace Core.Domain.Entities
@@ -10,10 +12,16 @@ namespace Core.Domain.Entities
         {
             CategoryId = categoryId;
         }
-        
-        
+
+        public Product(int categoryId)
+        {
+            CategoryId = categoryId;
+        }
+
+
         [ForeignKey(nameof(Category))]
         public int CategoryId { get; set; }
         public Category Category { get; set; }
+
     }
 }

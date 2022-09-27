@@ -38,7 +38,6 @@ namespace WebApi.Controllers.Abstractions
         [HttpPut]
         public async Task<TDictionaryDto> Update(TDictionaryDto dto) =>
             await CommandService.UpdateAsync(dto);
-
         [HttpDelete]
         public async Task Delete(int id) => 
             await CommandService.DeleteAsync(id);
@@ -46,5 +45,5 @@ namespace WebApi.Controllers.Abstractions
         [HttpGet]
         public virtual async Task<TDictionaryDto[]> ViewAll() =>
             await QueryService.GetAll();
-    }
+    }   
 }

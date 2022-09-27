@@ -1,3 +1,4 @@
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 using AutoMapper;
@@ -15,22 +16,15 @@ namespace Core.Application.Abstractions
     {
         private readonly DbSet<TDictionary> _dbSet;
         private readonly IMapper _mapper;
-
         protected readonly IAppDbContext Context;
-        
-        // public async Task<TBaseDictionaryDto> AddAsync(TDictionary dto)
-        // {
-        //  
-        // }
 
-        // public async Task UpdateAsync(TBaseDictionaryDto entity)
-        // {
-        //     _dbSet.Update(entity);
-        //
-        //     await Context.SaveChangesAsync(CancellationToken.None);
-        // }
-
-        public async Task<TBaseDictionaryDto> AddAsync(BaseDictionaryDto dto)
+        public BaseDictionaryCommandService(IMapper mapper, IAppDbContext context)
+        {
+            _mapper = mapper;
+            Context = context;
+            _dbSet = Context.GetDbSet<TDictionary>();
+        }
+        public async Task<TBaseDictionaryDto> AddAsync(TBaseDictionaryDto dto)
         {
             var entity = _mapper.Map<TDictionary>(dto);
             
@@ -41,39 +35,32 @@ namespace Core.Application.Abstractions
             return _mapper.Map<TDictionary, TBaseDictionaryDto>(entity);
         }
 
-        public Task UpdateAsync(BaseDictionaryDto entity)
-        {
-            throw new System.NotImplementedException();
-        }
-
         public async Task DeleteAsync(int id)
-        {
-            var entity = await _dbSet.FindAsync(new[] { id });
-
+        { 
+            var entity = await _dbSet.FindAsync(new[] {id});
             _dbSet.Remove(entity);
-
             await Context.SaveChangesAsync(CancellationToken.None);
         }
-
-        public Task CreateAsync(BaseDictionaryDto dictionaryDto)
+        public async Task CreateAsync(TBaseDictionaryDto dictionaryDto)
         {
-            throw new System.NotImplementedException();
-        }
-
-        public async Task CreateAsync(TBaseDictionaryDto dto)
-        {
-            var entity = _mapper.Map<TDictionary>(dto);
+            var entity = _mapper.Map<TDictionary>(dictionaryDto);
             
             _dbSet.Add(entity);
             await Context.SaveChangesAsync(CancellationToken.None);
         }
-        
         public async Task<TBaseDictionaryDto> UpdateAsync(TBaseDictionaryDto dto)
         {
             var entity = _mapper.Map<TDictionary>(dto);
+            if (entity is null)
+            {
+                throw new InvalidOperationException("Attribute is not found");
+            }
+
             _dbSet.Update(entity);
             await Context.SaveChangesAsync(CancellationToken.None);
             return _mapper.Map<TBaseDictionaryDto>(entity);
         }
     }
 }
+//Unit
+//Integration

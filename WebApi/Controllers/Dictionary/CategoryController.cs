@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using Core.Application.Categories;
 using Core.Application.Categories.Models;
 using Core.Application.Categories.Services;
 using Core.Application.CategoryAttributes.Web;
@@ -26,10 +27,17 @@ namespace WebApi.Controllers.Dictionary
             await CommandService.BindCategoryToAttributeAsync(request);
             
             return Ok();
-        }
+        }  
         
-        // GetAttributesByCategoryId
-        
-        // Unbind
+
+        [HttpDelete]
+        public async Task<IActionResult> UnbindCategoryAttribute([FromBody]BoundCategoryAttributeRequest request)
+        {
+            await QueryService.UnbindCategoryToAttributeAsync(request);
+            
+            return Ok();
+        }   
+
+
     }
 }

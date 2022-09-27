@@ -8,9 +8,9 @@ namespace Core.Application.Abstractions
         where TDictionary : BaseDictionary
         where TDictionaryDto : BaseDictionaryDto
     {
-        Task<TDictionaryDto> AddAsync(BaseDictionaryDto entity);
-        Task UpdateAsync(BaseDictionaryDto entity);
+        Task<TDictionaryDto> AddAsync(TDictionaryDto entity);
+        Task<TDictionaryDto> UpdateAsync(TDictionaryDto entity);
         Task DeleteAsync(int id);
-        Task CreateAsync(BaseDictionaryDto dictionaryDto);
+        Task CreateAsync(TDictionaryDto dictionaryDto);
     }
 }

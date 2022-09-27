@@ -6,6 +6,11 @@ namespace Core.Domain.Entities
 {
     public class Category : BaseDictionary
     {
+        public Category()
+        {
+            
+        }
+        
         public Category(int id, string name) : base(0, name)
         {
         }

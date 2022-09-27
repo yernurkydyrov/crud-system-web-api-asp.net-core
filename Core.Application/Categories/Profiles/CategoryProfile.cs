@@ -10,13 +10,9 @@ namespace Core.Application.Categories.Profiles
         public CategoryProfile()
         {
             CreateMap<Category, CategoryDto>()
-                .ForMember(q => q.Attributes, w => w.MapFrom(q => q.CategoryAttributes.Select(ca => ca.Attribute)));
+                .ForMember(q => q.Attributes, w => w.MapFrom(q => q.CategoryAttributes.Select(ca => ca.Attributive)));
 
-            CreateMap<CategoryDto, Category>()
-                .ForMember(u => u.Name, p => p.AddTransform(u => "aasdsdsds"))
-                .ForMember(q => q.CategoryAttributes, 
-                    w => w.MapFrom(q => q.Attributes.Select(ca => new CategoryAttribute(q.Id, ca.Id))));
-            
+            CreateMap<CategoryDto, Category>();
         }
     }
 }

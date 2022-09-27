@@ -26,8 +26,8 @@ namespace Core.Domain.Entities
         [ForeignKey(nameof(Category))]
         public int? CategoryId { get; set; }
         public Category Category { get; set; }
-        [ForeignKey(nameof(Attribute))]
+        [ForeignKey(nameof(Attributive))]
         public int? AttributeId { get; set; }
-        public Attribute Attribute { get; set; }
+        public Attributive Attributive { get; set; }
     }
 }

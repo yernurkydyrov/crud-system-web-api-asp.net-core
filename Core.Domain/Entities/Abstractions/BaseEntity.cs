@@ -2,7 +2,7 @@
 {
     public class BaseEntity
     {
-        private BaseEntity()
+        public BaseEntity()
         {
             
         }

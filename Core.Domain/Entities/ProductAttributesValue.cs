@@ -12,14 +12,21 @@ namespace Core.Domain.Entities
             AttributeId = attributeId;
             Value = value;
         }
-        
+
+        public ProductAttributesValue(int productId, int attributeId, string value)
+        {
+            ProductId = productId;
+            AttributeId = attributeId;
+            Value = value;
+        }
+
 
         [ForeignKey(nameof(Product))]
         public int ProductId { get; set; }
         public Product Product { get; set; }
-        [ForeignKey(nameof(Attribute))]
+        [ForeignKey(nameof(Attributive))]
         public int AttributeId { get; set; }
-        public Attribute Attribute { get; set; }
+        public Attributive Attributive { get; set; }
         public string Value { get; set; }
 
     }

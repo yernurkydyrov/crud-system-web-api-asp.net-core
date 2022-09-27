@@ -1,21 +1,18 @@
 ﻿using System;
 using Core.Application.Abstractions;
 using Core.Application.Attributes.Models;
-using Core.Application.Attributes.Services;
-using Core.Application.Categories.Models;
 using Core.Domain.Entities;
 using WebApi.Controllers.Abstractions;
-using Attribute = Core.Domain.Entities.Attribute;
 
 namespace WebApi.Controllers.Dictionary
 {
     public class AttributeController : BaseDictionaryController<
-        IAttributeQueryServices,
-        BaseDictionaryQueryService<Attribute, AttributeDto>,
-        Attribute,
+        IDictionaryQueryService<Attributive, AttributeDto>,
+        IDictionaryCommandService<Attributive, AttributeDto>,
+        Attributive,
         AttributeDto>
     {
-        public AttributeController(IDictionaryQueryService<Attribute, AttributeDto> queryService) : base(queryService)
+        public AttributeController(IDictionaryQueryService<Attributive, AttributeDto> queryService, IDictionaryCommandService<Attributive, AttributeDto> commandService) : base(queryService, commandService)
         {
         }
     }

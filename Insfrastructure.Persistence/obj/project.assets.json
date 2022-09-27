@@ -1119,19 +1119,19 @@
     ]
   },
   "packageFolders": {
-    "/home/madik/.nuget/packages/": {}
+    "C:\\Users\\HP\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/madik/Development/Work/Yernur/crud-system-web-api-asp.net-core/Insfrastructure.Persistence/Insfrastructure.Persistence.csproj",
+      "projectUniqueName": "C:\\Users\\HP\\RiderProjects\\AppApi\\Insfrastructure.Persistence\\Insfrastructure.Persistence.csproj",
       "projectName": "Insfrastructure.Persistence",
-      "projectPath": "/home/madik/Development/Work/Yernur/crud-system-web-api-asp.net-core/Insfrastructure.Persistence/Insfrastructure.Persistence.csproj",
-      "packagesPath": "/home/madik/.nuget/packages/",
-      "outputPath": "/home/madik/Development/Work/Yernur/crud-system-web-api-asp.net-core/Insfrastructure.Persistence/obj/",
+      "projectPath": "C:\\Users\\HP\\RiderProjects\\AppApi\\Insfrastructure.Persistence\\Insfrastructure.Persistence.csproj",
+      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\HP\\RiderProjects\\AppApi\\Insfrastructure.Persistence\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/madik/.config/NuGet/NuGet.Config"
+        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -1141,10 +1141,9 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "/home/madik/Development/Work/Yernur/crud-system-web-api-asp.net-core/Core.Application/Core.Application.csproj": {
-              "projectPath": "/home/madik/Development/Work/Yernur/crud-system-web-api-asp.net-core/Core.Application/Core.Application.csproj"
+            "C:\\Users\\HP\\RiderProjects\\AppApi\\Core.Application\\Core.Application.csproj": {
+              "projectPath": "C:\\Users\\HP\\RiderProjects\\AppApi\\Core.Application\\Core.Application.csproj"
             }
           }
         }
@@ -1157,7 +1156,6 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
@@ -1184,22 +1182,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[3.1.10, 3.1.10]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[3.1.0, 3.1.0]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/mono/msbuild/Current/bin/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.422\\RuntimeIdentifierGraph.json"
       }
     }
   }

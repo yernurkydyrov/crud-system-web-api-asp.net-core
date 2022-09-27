@@ -3,13 +3,13 @@ using Core.Domain.Entities.Abstractions;
 
 namespace Core.Domain.Entities
 {
-    public class Attribute : BaseDictionary
+    public class Attributive : BaseDictionary
     {
-        public Attribute(int id, string name) : base(id, name)
+        public Attributive(int id, string name) : base(id, name)
         {
         }
 
-        public Attribute(string name) : this(0, name)
+        public Attributive(string name) : this(0, name)
         {
         }
         public ICollection<CategoryAttribute> AttributesCategory { get; set; }

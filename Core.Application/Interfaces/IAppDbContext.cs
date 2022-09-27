@@ -8,7 +8,7 @@ namespace Core.Application.Interfaces
 {
     public interface IAppDbContext
     {
-        DbSet<Attribute> Attributes { get;  set; }
+        DbSet<Attributive> Attributes { get;  set; }
         DbSet<Category> Categories { get;  set; }
         DbSet<Product> Products { get;  set; }
         DbSet<ProductAttributesValue> ProductAttributeValues { get;  set; } 
