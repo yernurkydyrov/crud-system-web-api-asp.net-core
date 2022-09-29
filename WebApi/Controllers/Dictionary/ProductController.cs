@@ -19,7 +19,7 @@ namespace WebApi.Controllers.Dictionary
         }
 
         [HttpPut]
-        public async Task<IActionResult> UpdateProduct([FromServices] UpdateProductCommand updateProductCommand,[FromBody] CreateProductDto dto)
+        public async Task<IActionResult> UpdateProduct([FromServices] UpdateProductCommand updateProductCommand,[FromBody] ProductDto dto)
         {
 
             await updateProductCommand.UpdateProductAsync(dto);

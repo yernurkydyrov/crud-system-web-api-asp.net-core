@@ -20,6 +20,11 @@ namespace Core.Domain.Entities
             Value = value;
         }
 
+        public ProductAttributesValue()
+        {
+            
+        }
+
 
         [ForeignKey(nameof(Product))]
         public int ProductId { get; set; }

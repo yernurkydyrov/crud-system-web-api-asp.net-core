@@ -19,23 +19,23 @@ namespace Core.Application.Products.Commands
             _db = db;
         }
 
-        public async Task UpdateProductAsync(CreateProductDto req)
+        public async Task UpdateProductAsync(ProductDto req)
         {
             var productDto = req;
 
-            var product = await _db.Products.FindAsync(new object[] {productDto.CategoryId});
+            var product = await _db.Products.FindAsync(new object[] {productDto.Id});
 
             if (product is null)
             {
                 throw new InvalidOperationException("Product not found");
             }
-            
+
+            product.Id = productDto.Id;
             product.CategoryId = productDto.CategoryId;
 
             var deleteData = await _db.ProductAttributeValues
                 .Where(p => p.ProductId == productDto.CategoryId).ToListAsync();
             _db.ProductAttributeValues.RemoveRange(deleteData);
-            
             _db.ProductAttributeValues.AddRange(productDto.ProductAttributeValue
                 .Select(p => new ProductAttributesValue(product.Id, p.AttributeId, p.Value)));
 

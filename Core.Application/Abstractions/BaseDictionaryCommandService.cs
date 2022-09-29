@@ -37,7 +37,7 @@ namespace Core.Application.Abstractions
 
         public async Task DeleteAsync(int id)
         { 
-            var entity = await _dbSet.FindAsync(new[] {id});
+            var entity = await _dbSet.FirstOrDefaultAsync(i => i.Id == id);
             _dbSet.Remove(entity);
             await Context.SaveChangesAsync(CancellationToken.None);
         }
